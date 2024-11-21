@@ -1,66 +1,83 @@
+/* mobil-layout */
+/* fjerna mye css fordi så ikke fort nok var mobile først */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #global-header {
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 9px 18px;
-    position: relative; 
-}
-
-.nav-left, .nav-right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-.nav-right{margin-left: -10px;}
-
-nav ul {
-    display: flex;
-    gap: 15px;
-    padding: 0;
-    list-style-type: none;
-    margin: 0;
-}
-.logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 20px;
+    height: 100vh;
+    padding: 20px;
     text-align: center;
-    position: absolute;
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 1; 
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .søkefelt {
     position: relative;
-    max-width: 180px;
-    flex-shrink: 0;
+    max-width: 200px;
+    width: 100%;
 }
 
 .søkefelt input {
     width: 100%;
-    padding: 10px 40px 10px 10px;
+    padding: 10px 40px 10px 10px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.søkefelt i {
+.søkefelt button {
     position: absolute;
-    right: 10px;
+    right: 10px; 
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
-    color: #999;
-    pointer-events: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-.ikoner {
-    display: flex;
-    gap: 10px;
+.søkefelt i {
+    font-size: 18px; 
+    pointer-events: none; 
 }
-body {
+nav {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 600px) {
+    #global-header {
+        padding: 10px;  
+    }
+
+    .header-content {
+        gap: 15px;  
+    }
+    body, html {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav, nav a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
 
 
     
