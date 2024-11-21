@@ -9,29 +9,35 @@
 </head>
 <body>
     <header id="global-header">
-        <form class="søkefelt">
-            <input type="text" placeholder="Her kan du søke...">
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <form class="søkefelt" role="search">
+            <input type="text" id="search" placeholder="Her kan du søke..." aria-label="Søk">
+            <button type="submit" aria-label="Søk">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </form>
-        <nav class="nav-left">
+        <nav class="nav-top">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#våre-populære-produkter">Produkter</a></li>
             </ul>
-        </nav>
-        <span class="logo"><a href="index.html">Logo</a></span>
-        <nav class="nav-right">
+        </nav>        
+
+        <h1 class="logo"><a href="index.html">Logo</a></h1>
+
+        <nav class="nav-bottom">
             <ul>
                 <li><a href="#våre-populære-kategorier">Kategorier</a></li>
                 <li><a href="#kontakt-oss">Kontakt oss</a></li>
             </ul>
         </nav>
-        <nav class="ikoner">
+
+        <nav class="handlekurv">
             <a href="checkout.html">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping" aria-label="Handlekurv"></i>
             </a>
         </nav>
     </header>
+    
     
     <main>
         <section id="banner">
@@ -51,14 +57,14 @@
         <section id="våre-populære-kategorier">
             <article>
                 <h2>Populære kategorier</h2>
-                <p></p>
+                <p>jkgghjg</p>
             </article>
         </section>
-        <section>
-            <article>
-                <h2>Her er noen anmeldelser</h2>
+        <section id="anmeldelser">
+            <h2>Anmeldelelser</h2>
+            <article>               
                 <img src="img/dogs" alt="hunder">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis feugiat ex non mauris pharetra, ut tincidunt nibh commodo. Sed lectus urna, egestas nec efficitur eget, suscipit ac diam. Maecenas tristique libero lacinia enim semper, sit amet convallis nunc consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis feugiat ex non mauris pharetra, ut tincidunt nibh commodo. Sed lectus urna, egestas nec efficitur eget, suscipit ac diam. Maecenas tristique libero lacinia enim semper, sit amet convallis nunc consectetur</p>
             </article>
         </section>
     </main>
@@ -67,7 +73,7 @@
         <section>
             <span class="logo">Logo</span>
             <h2>Din favoritt butikk</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros.  Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros.  Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
         </section>
         <section id="kontakt-oss">
             <h3>KONTAKT</h3>
@@ -93,5 +99,4 @@
         </section>
     </footer>
 </body>
-
 </html>
