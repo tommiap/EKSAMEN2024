@@ -8,25 +8,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header id="global-header">
         <div class="søkefelt">
             <input type="text" placeholder="Her kan du søke...">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <nav>
+        <nav class="nav-left">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="product.html">Produkter</a></li>
-                <li><a href="#">Kategorier</a></li>
-                <li><a href="#">Kontakt oss</a></li>
-            </ul>      
+            </ul>
         </nav>
         <span class="logo">Logo</span>
+        <nav class="nav-right">
+            <ul>
+                <li><a href="#">Kategorier</a></li>
+                <li><a href="#">Kontakt oss</a></li>
+            </ul>
+        </nav>
         <div class="ikoner">
-            <a href="checkout.html">checkout</a>
+            <a href="checkout.html">Checkout</a>
             <i class="fa-solid fa-cart-shopping"></i>
         </div>
     </header>
+    
     <main>
         <section>
             <article>
@@ -39,7 +44,7 @@
             <article>
                 <h2>Her er populære produkter</h2>
                 <p>Forskjellige</p>
-                <a href="product.html">New product</a>
+                <a href="product.html">Nytt product</a>
             </article>
         </section>
         <section>
@@ -52,56 +57,40 @@
             <article>
                 <h2>Her er noen anmeldelser</h2>
                 <img src="img/dogs" alt="hunder">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis feugiat ex non mauris pharetra, ut tincidunt nibh commodo. Sed lectus urna, egestas nec efficitur eget, suscipit ac diam. Maecenas tristique libero lacinia enim semper, sit amet convallis nunc consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis feugiat ex non mauris pharetra, ut tincidunt nibh commodo. Sed lectus urna, egestas nec efficitur eget, suscipit ac diam. Maecenas tristique libero lacinia enim semper, sit amet convallis nunc consectetur.</p>
             </article>
         </section>
-            
-          
     </main>
 
-        <footer>
-            <section>
-                <span class="logo">Logo</span>
-                <h2>Din favoritt butikk</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-            </section>
-            <section>
-                <h3>KONTAKT</h3>
-                <nav>
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot"></i> Adresse: Elefantstien 19, 1766 Halden</li>
-                        <li><i class="fa-solid fa-phone"></i> Telefon: 77 88 99 43</li>
-                        <li><i class="fa-solid fa-envelope"></i> E-mail: halden@hiof.no</li>
-                        <li><i class="fa-solid fa-clock"></i> Åpningstider: Stenger 15:00</li>
-                    </ul>
-                </nav>
-
-               
-            </section>
-            <section>
-                <h3>Snarveier</h3>
-                <nav>
-                    <ul>
-                       <li><a href="#">Hjem</a></li>
-                       <li><a href="#">Produkter</a></li>
-                        <li><a href="#">Kategorier</a></li>
-                        <li><a href="#">Kontakt oss</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section>
-                <h3>Følg oss på sosiale medier!</h3>
+    <footer>
+        <section>
+            <span class="logo">Logo</span>
+            <h2>Din favoritt butikk</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros.  Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        </section>
+        <section>
+            <h3>KONTAKT</h3>
+            <nav>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Adresse: Elefantstien 19, 1766 Halden</li>
+                    <li><i class="fa-solid fa-phone"></i> Telefon: 77 88 99 43</li>
+                    <li><i class="fa-solid fa-envelope"></i> E-mail: halden@hiof.no</li>
+                    <li><i class="fa-solid fa-clock"></i> Åpningstider: Stenger 15:00</li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <h4>Snarveier</h4>
+            <nav>
                 <ul>
                     <li><i class="fa-brands fa-instagram"></i></li>
                     <li><i class="fa-brands fa-facebook"></i></li>
                     <li><i class="fa-brands fa-linkedin"></i></li>
                     <li><i class="fa-brands fa-pinterest"></i></li>
                 </ul>
-            </section>
-        </footer>
-
-    
-
-    
+            </nav>
+        </section>
+    </footer>
 </body>
+
 </html>
