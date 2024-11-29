@@ -3,32 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eksamen</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
 </head>
 <body>
     <header id="global-header">
-        <div class="søkefelt">
-            <input type="text" placeholder="Her kan du søke...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <nav>
+        <form class="søkefelt" role="search">
+            <input type="text" id="search" placeholder="Her kan du søke..." aria-label="Søk">
+            <button type="submit" aria-label="Søk">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <nav class="nav-top">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="product.html">Produkter</a></li>
-                <li><a href="#">Kategorier</a></li>
-                <li><a href="#">Kontakt oss</a></li>
-            </ul>      
+                <li><a href="index.html#våre-mest-populære-produkter">Produkter</a></li>
+            </ul>
         </nav>
-        <span class="logo">Logo</span>
-        <div class="ikoner">
-            <a href="checkout.html">checkout</a>
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-    </header>
+        <section class="logo">
+            <h1><a href="index.html">Logo</a></h1>
+        </section>        
+        <nav class="nav-bottom">
+            <ul>
+                <li><a href="index.html#våre-mest-populære-kategorier">Kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontakt oss</a></li>
+            </ul>
+        </nav>
 
-    
-    
+        <nav class="ikoner">
+            <a href="checkout.html">
+                <i class="fa-regular fa-user" aria-label="Bruker"></i>
+                <i class="fa-regular fa-heart" aria-label="Mine favoritter"></i>
+                <i class="fa-solid fa-cart-shopping" aria-label="Handlekurv"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout-container">
+            <h2>1. SHOPPINGBAGEN DIN</h2>
+            <article class="product">
+                <img src="img/watermelon.jpg" alt="Produktbilde" class="product-image">
+                <ul class="product-details">
+                    <li><strong>Produktnavn:</strong> Vannmelon</li>
+                    <li><strong>Pris:</strong> Kr 29</li>
+                    <li><strong>Farge:</strong> Grønn</li>
+                </ul>
+            </article>
+            <article class="product">
+                <img src="img/watermelon.jpg" alt="Produktbilde" class="product-image">
+                <ul class="product-details">
+                    <li><strong>Produktnavn:</strong> Vannmelon</li>
+                    <li><strong>Pris:</strong> Kr 29</li>
+                    <li><strong>Farge:</strong> Grønn</li>
+                </ul>
+            </article>
+            <article class="product">
+                <img src="img/watermelon.jpg" alt="Produktbilde" class="product-image">
+                <ul class="product-details">
+                    <li><strong>Produktnavn:</strong> Vannmelon</li>
+                    <li><strong>Pris:</strong> Kr 29</li>
+                    <li><strong>Farge:</strong> Grønn</li>
+                </ul>
+            </article>
+        </section>
+        <section class="user-info">
+            <h2>2. DINE OPPLYSNINGER</h2>
+            <form class="address-form">
+                <label for="first-name">Fornavn*</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Fornavn" required>
+        
+                <label for="last-name">Etternavn*</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Etternavn" required>
+        
+                <label for="street-address">Gateadresse*</label>
+                <input type="text" id="street-address" name="street-address" placeholder="Gateadresse" required>
+        
+                <label for="postal-code">Postnummer*</label>
+                <input type="number" id="postal-code" name="postal-code" placeholder="Postnummer" required>
+        
+                <label for="city">Poststed*</label>
+                <input type="text" id="city" name="city" placeholder="Poststed" required>
+
+                <button type="submit" class="save-button">Lagre</button>
+                <a href="#" class="cancel-link">Avbryt</a>
+            </form>
+        </section>
+        <section class="delivery-options">
+            <h2>3. LEVERING</h2>
+            <p class="delivery-title">LEVERINGSVALG</p>
+            <form class="delivery-form">
+                <label>
+                    <input type="radio" name="delivery" value="express-home">
+                    Express Hjemlevering
+                </label>
+        
+                <label>
+                    <input type="radio" name="delivery" value="express-pickup">
+                    Ekspress Pakke til utleveringssted
+                </label>
+        
+                <label>
+                    <input type="radio" name="delivery" value="standard-home">
+                    Standard Hjemlevering
+                </label>
+            </form>
+        </section>
+        <section class="payment-section">
+            <h2>4. BETALING</h2>
+            <form class="payment-form">
+                <div class="form-group">
+                    <label for="card-number">Kortnummer</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="146342****2935" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Utløpsdato</label>
+                    <input type="date" id="expiry-date" name="expiry-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvc">CVC/CVV</label>
+                    <input type="text" id="cvc" name="cvc" placeholder="CVC/CVV" required>
+                </div>
+        
+                <p class="total-amount">Å betale inkl. mva.<br><strong>1 199 kr</strong></p>
+                <button type="submit" class="purchase-button">Fullfør kjøp</button>
+        
+                <p class="terms">
+                    Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
+                </p>
+        
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes">
+                        Ja takk! Send nyhetsbrev til meg.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sms" value="yes">
+                        Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
+                    </label>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer id="site-footer">
+        <section class="logo">
+            <h2><a href="index.html">Logo</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros.  Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+        </section>
+        <section id="kontakt-oss">
+            <h3>KONTAKT</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Adresse: Elefantstien 19, 1766 Halden</li>
+                    <li><i class="fa-solid fa-phone"></i> Telefon: 77 88 99 43</li>
+                    <li><i class="fa-solid fa-envelope"></i> E-mail: halden@hiof.no</li>
+                    <li><i class="fa-solid fa-clock"></i> Åpningstider: Stenger 15:00</li>
+                </ul>
+        </section>
+        <section class="snarveier">
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html#våre-mest-populære-produkter">Produkter</a></li>
+                <li><a href="index.html#våre-mest-populære-kategorier">Kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontakt oss</a></li>
+            </ul>
+
+        </section>
+        <section class="sosiale-medier">
+            <h3>Sosiale medier</h3>
+            <nav>
+                <ul>
+                    <li><a href="#"></a><i class="fa-brands fa-instagram"></i></li>
+                    <li><a href="#"></a><i class="fa-brands fa-facebook"></i></li>
+                    <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+                    <li><a href="#"></a><i class="fa-brands fa-pinterest"></i></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
 </body>
 </html>
