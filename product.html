@@ -1,83 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eksamen</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
 </head>
 <body>
     <header id="global-header">
-        <div class="søkefelt">
-            <input type="text" placeholder="Her kan du søke...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <nav class="nav-left">
+        <form class="søkefelt" role="search">
+            <input type="text" id="search" placeholder="Her kan du søke..." aria-label="Søk">
+            <button type="submit" aria-label="Søk">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <nav class="nav-top">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="product.html">Produkter</a></li>
+                <li><a href="index.html#våre-mest-populære-produkter">Produkter</a></li>
             </ul>
         </nav>
-        <span class="logo">Logo</span>
-        <nav class="nav-right">
+        <section class="logo">
+            <h1><a href="index.html">Logo</a></h1>
+        </section>        
+        <nav class="nav-bottom">
             <ul>
-                <li><a href="#">Kategorier</a></li>
-                <li><a href="#">Kontakt oss</a></li>
+                <li><a href="index.html#våre-mest-populære-kategorier">Kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontakt oss</a></li>
             </ul>
         </nav>
-        <div class="ikoner">
-            <a href="checkout.html">Checkout</a>
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-    </header>
-    <nav>
-        <a href="index.html">Hjem</a>
-        <a href="#">Kategori</a>
-        <span>Produktnavn</span>   
-    </nav>
-    <main>
-        <footer>
-            <section>
-                <span class="logo">Logo</span>
-                <h2>Din favoritt butikk</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-            </section>
-            <section>
-                <h3>KONTAKT</h3>
-                <nav>
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot"></i> Adresse: Elefantstien 19, 1766 Halden</li>
-                        <li><i class="fa-solid fa-phone"></i> Telefon: 77 88 99 43</li>
-                        <li><i class="fa-solid fa-envelope"></i> E-mail: halden@hiof.no</li>
-                        <li><i class="fa-solid fa-clock"></i> Åpningstider: Stenger 15:00</li>
-                    </ul>
-                </nav>
 
-               
-            </section>
-            <section>
-                <h3>Snarveier</h3>
-                <nav>
-                    <ul>
-                       <li><a href="#">Hjem</a></li>
-                       <li><a href="#">Produkter</a></li>
-                        <li><a href="#">Kategorier</a></li>
-                        <li><a href="#">Kontakt oss</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section>
-                <h3>Følg oss på sosiale medier!</h3>
-                <ul>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                    <li><i class="fa-brands fa-pinterest"></i></li>
-                </ul>
-            </section>
-        </footer>
+        <nav class="ikoner">
+            <a href="checkout.html">
+                <i class="fa-regular fa-user" aria-label="Bruker"></i>
+                <i class="fa-regular fa-heart" aria-label="Mine favoritter"></i>
+                <a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="Handlekurv"></i></a>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="product-page">
+            <nav class="breadcrumb">
+                <ol>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="kategori.html">Kategori</a></li>
+                    <li>Produktnavn</li>
+                </ol>
+            </nav>
+            <div class="product-images">
+                <img src="img/gingerbread.jpg" alt="Produktbilde 1">
+                <img src="img/gingerbread.jpg" alt="Produktbilde 2">
+                <img src="img/gingerbread.jpg" alt="Produktbilde 3">
+                <img src="img/gingerbread.jpg" alt="Produktbilde 4">
+            </div>
+        </section>
+        <section id="product-details">
+            <h1>Produktnavn</h1>
+            <p class="brand"><a href="#">MERKENAVN</a></p>
+            <ul>
+                <li><strong>Pris:</strong> 55 kr inkl. mva.</li>
+                <li><strong>Farge:</strong> brun</li>
+            </ul>
+        </section>
+        <section id="related-products">
+            <h2>Lignende produkter</h2>
+            <ul class="product-list">
+                <li>
+                    <article class="product">
+                        <img src="img/watermelon.jpg" alt="watermelon product">
+                        <h3>Product name</h3>
+                        <p class="price">Kr 29</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="product">
+                        <img src="img/watermelon.jpg" alt="watermelon product">
+                        <h3>Product name</h3>
+                        <p class="price">Kr 29</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="product">
+                        <img src="img/watermelon.jpg" alt="watermelon product">
+                        <h3>Product name</h3>
+                        <p class="price">Kr 29</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="product">
+                        <img src="img/watermelon.jpg" alt="watermelon product">
+                        <h3>Product name</h3>
+                        <p class="price">Kr 29</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
-    
-</body>
+    <footer id="site-footer">
+        <section class="logo">
+            <h2><a href="index.html">Logo</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae blandit leo, vel mollis eros.  Vivamus vitae blandit leo, vel mollis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+        </section>
+        <section id="kontakt-oss">
+            <h3>KONTAKT</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Adresse: Elefantstien 19, 1766 Halden</li>
+                    <li><i class="fa-solid fa-phone"></i> Telefon: 77 88 99 43</li>
+                    <li><i class="fa-solid fa-envelope"></i> E-mail: halden@hiof.no</li>
+                    <li><i class="fa-solid fa-clock"></i> Åpningstider: Stenger 15:00</li>
+                </ul>
+        </section>
+        <section class="snarveier">
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html#våre-mest-populære-produkter">Produkter</a></li>
+                <li><a href="index.html#våre-mest-populære-kategorier">Kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontakt oss</a></li>
+            </ul>
+
+        </section>
+        <section class="sosiale-medier">
+            <h3>Sosiale medier</h3>
+            <nav>
+                <ul>
+                    <li><a href="#"></a><i class="fa-brands fa-instagram"></i></li>
+                    <li><a href="#"></a><i class="fa-brands fa-facebook"></i></li>
+                    <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+                    <li><a href="#"></a><i class="fa-brands fa-pinterest"></i></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
 </html>
