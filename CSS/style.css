@@ -1,4 +1,3 @@
-/* Generell styling */
 * {
     margin: 0;
     padding: 0;
@@ -14,45 +13,52 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 20px;
+    align-items: flex-start;
     border-bottom: 1px solid #ccc;
     gap: 15px;
 }
 form.søkefelt {
     display: flex;
+    justify-content: center; 
     align-items: center;
     position: relative;
-    width: 100%;
+    margin: 0 0 15px 0; 
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #ccc; 
+    border-radius: 25px; 
+    box-sizing: border-box; 
+    background-color: #fff; 
 }
 form.søkefelt input {
-    width: 100%;
-    padding: 10px 40px 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    font-size: 16px;
+    flex: 1; 
+    padding: 10px 40px 10px 15px; 
+    border: none; 
+    border-radius: 25px; 
+    font-size: 14px; 
+    outline: none; 
 }
-
 form.søkefelt button {
     position: absolute;
-    right: 15px;
-    top: 50%;
+    right: 10px;
+    top: 50%; 
     transform: translateY(-50%);
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 16px; 
+    color: #666; 
     cursor: pointer;
-    color: #666;
 }
-
 .nav-top ul, .nav-bottom ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
     gap: 10px;
     padding: 0;
     margin:  0;
+    justify-content: flex-start; 
 }
+
 .nav-top a, .nav-bottom a {
     text-decoration: none;
     color: #333;
@@ -85,7 +91,6 @@ nav.ikoner a {
 nav.ikoner a:hover{
     color: #0078d4;
 }
-
 #banner {
     background-color: #d3d3d3;
     padding: 20px;
@@ -115,13 +120,349 @@ nav.ikoner a:hover{
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .promo-button:hover {
     background-color: #ccc; 
 }
-    
+/* Produktsiden */
+#product-page {
+    padding: 20px;
+    text-align: center;
+}
 
+/* Brødsmulesti */
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
 
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #000;
+}
+
+.breadcrumb li:last-child {
+    font-weight: bold;
+    color: #000;
+}
+/* Produktbilder */
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Bilder dekker hele bredden */
+}
+
+.product-images img {
+    width: 100%; 
+    height: auto;
+    max-height: 300px; 
+    border-radius: 10px; 
+    object-fit: cover; 
+}
+/* Seksjon for produktdetaljer */
+#product-details {
+    text-align: left;
+    margin: 20px 10px 0;
+    width: 100%;
+}
+
+#product-details h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#product-details .brand a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: underline;
+}
+
+#product-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#product-details ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#product-details ul li strong {
+    font-weight: bold;
+}
+/* Seksjon for relaterte produkter */
+#related-products {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: left;
+}
+#related-products h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.product-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    object-fit: cover;
+}
+.product h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+.product .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+    margin-top: 5px;
+}
+.checkout-container {
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.checkout-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.product-image {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.product-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+}
+.product-details li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.product-details li strong {
+    font-weight: bold;
+}
+.user-info {
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.user-info h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.address-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.address-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.address-form input:focus {
+    border-color: #333;
+    outline: none;
+}
+.save-button {
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.save-button:hover {
+    background-color: #555;
+}
+.cancel-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.cancel-link:hover {
+    text-decoration: underline;
+}
+.delivery-options {
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+.delivery-options h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.delivery-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.delivery-form label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.delivery-form input[type="radio"] {
+    accent-color: #333;
+    width: 16px;
+    height: 16px;
+}
+.payment-section {
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+.payment-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group input:focus {
+    border-color: #333;
+    outline: none;
+}
+.total-amount {
+    font-size: 16px;
+    margin: 20px 0;
+    text-align: left;
+}
+.total-amount strong {
+    font-size: 18px;
+    color: #333;
+}
+.purchase-button {
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    width: 100%;
+}
+.purchase-button:hover {
+    background-color: #555;
+}
+.terms {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+    margin-top: 15px;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.checkbox-group label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #333;
+}
 /*senere
 .slider-container {
     display: flex;
@@ -171,10 +512,10 @@ nav.ikoner a:hover{
     color: #000;
     z-index: 2;
 }
-#våre-populære-produkter{
+#våre-mest-populære-produkter{
     padding: 10px;
 }
-#våre-populære-produkter article{
+#våre-mest-populære-produkter article{
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -188,7 +529,7 @@ nav.ikoner a:hover{
     max-width: 100%;
     margin: 0 auto 10px;
 }
-#våre-populære-produkter h2{
+#våre-mest-populære-produkter h2{
     font: 16px;
     margin: 5px 0 15px 0;
 }
@@ -210,42 +551,43 @@ nav.ikoner a:hover{
 .product-image{
     width: 100;
 }
-#våre-populære-kategorier {
+#våre-mest-populære-kategorier {
     margin-top: 30px; 
     padding: 20px;
     text-align: center; 
 }
-#våre-populære-kategorier h2 {
+#våre-mest-populære-kategorier h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #000; 
 }
-#våre-populære-kategorier p {
+#våre-mest-populære-kategorier p {
     font-size: 16px;
     color: #555; 
     margin-bottom: 20px;
 }
 .kategorier-liste {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column; 
-    gap: 20px; 
-    align-items: center; 
+    gap: 20px;
+    align-items: stretch; 
 }
 .kategorier-liste .kategori-boks {
-    width: 90%; 
-    max-width: 500px; 
-    border: 1px solid #ccc; 
+    width: 100%; 
+    max-width: 100%; 
+    border: 1px solid #ccc;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    background-color: #fff; 
-    border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px; 
 }
 .kategorier-liste .kategori-boks:hover {
     transform: translateY(-5px);
@@ -254,16 +596,18 @@ nav.ikoner a:hover{
 .kategorier-liste .kategori-boks h3 {
     font-size: 18px;
     font-weight: bold;
-    color: #000; 
+    color: #000;
 }
 .kategorier-liste .kategori-3 {
     height: 300px;
+    background-color: #f9f9f9; 
 }
+
 .kategorier-liste .kategori-1,
 .kategorier-liste .kategori-2,
 .kategorier-liste .kategori-4,
 .kategorier-liste .kategori-5 {
-    height: 200px; 
+    height: 200px;
 }
 #anmeldelser {
     margin-top: 30px;
@@ -340,7 +684,7 @@ nav.ikoner a:hover{
 }
 
 #site-footer .logo h2 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #000;
@@ -438,7 +782,6 @@ nav.ikoner a:hover{
 #site-footer section {
     margin-bottom: 20px;
 }
-
 
 
 
